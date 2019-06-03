@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kill the Night King</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class='title'>
+            <h1>Kill the Night King</h1>
+        </div>
+    </header>
+    <div class="HMimg center">
+        <h2 id='stagetitle'>Winter Is Coming!</h2>
+        <img src="img/stage-start.jpg" alt="stage-start" id='stageimage'>
+        <div class="caption">
+            <p id="stagecaption"></p>
+        </div>
+        <div class="instruction">
+            <h3>Instruction</h3>
+            <p class="intro">Lead your journey to defend the north. Make a correct guess on a letter in a word related to Game of Throne to take a step forward. Your goal is to kill the Night King. Start your journey by clicking the new game button and guessing the first letter in the below box. Good Luck! </p>
+        </div>
+    </div>
+    
+    <div class="center game">
+        <div class="board">
+            <!-- !this div will be refresh by js -->
+
+            <div class="worddisplay">
+                <div class="letter">G</div>
+                <div class="letter">A</div>
+                <div class="letter">M</div>
+                <div class="letter">E</div>         <div></div>
+                <div class="letter">o</div> 
+                <div class="letter">f</div>
+                <div></div> 
+                <div class="letter">T</div> 
+                <div class="letter">H</div>
+                <div class="letter">R</div>
+                <div class="letter">O</div>
+                <div class="letter">N</div>
+                <div class="letter">E</div>
+            </div>
+
+
+
+        </div>
+
+        <div>
+                <input type="text" id="inputletter" maxlength='0' placeholder="Type a Letter">
+        </div>
+
+        <div>
+                <button id='newgame'>New Game</button>
+        </div>
+
+        <div id="guessedletters">GUESS LETTERS: </div>
+    </div>
+
+    
+
+    
+
+    <aside class="left">
+        <h2>Leader Board</h2>
+        left sidebar is for fast solving gamers.
+        <ol>
+            <li class="leader">Arria Stock <span>3m</span></li>
+            <li class="leader">John Snow</li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+            <li class="leader"></li>
+        </ol>
+    </aside>
+    <aside class="right">
+    <h2>Word History</h2>    
+        right sidebar is for word guess history.
+        <ol id='wordhistory'>
+            
+        </ol>
+    </aside>
+    
+    <footer>
+        <div class="copyright">Copyright @ 2019 Seattle, WA </div>
+        <div class="email">Pinyi Yang Email: pinyi.yang85@gmail.com</div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
