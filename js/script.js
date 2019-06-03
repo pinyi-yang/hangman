@@ -1,5 +1,5 @@
 //?this is for variable declaration
-var wordDataBase = ['Aerys Targaryen', 'Blackfyre Rebellion', 'Crow', 'Direwolf', 'Dothraki', 'Eunuch', 'Faceless Men', 'Faith of the Seven', 'Grayscale', 'Great Houses', 'Hand of the King', 'Iron Throne', 'Jon Snow', 'Khaleesi', "King's Landing", 'Long Night', 'Maester', "Night's Watch", 'Others', 'White Walkers', 'Qarth', 'Rhaegar Targaryen', "R'hllor", 'Sellsword', 'Sons of the Harpy', 'Turncloak', 'Unsullied', 'Valar Morghulis', 'Wildlings', 'Xaro Xhoan Daxos', 'Yunkai', 'Zafra'];
+var wordDataBase = ['Aerys Targaryen', 'Blackfyre Rebellion', 'Crow', 'Direwolf', 'Dothraki', 'Eunuch', 'Faceless Men', 'Faith of the Seven', 'Grayscale', 'Great Houses', 'Hand of the King', 'Iron Throne', 'Jon Snow', 'Khaleesi', "King's Landing", 'Long Night', 'Maester', "Night's Watch", 'Others', 'White Walkers', 'Qarth', 'Rhaegar Targaryen', "R'hllor", 'Sellsword', 'Sons of the Harpy', 'Turncloak', 'Unsullied', 'Valar Morghulis', 'Wildlings', 'Xaro Xhoan Daxos', 'Yunkai', 'Zafra', 'John Snow', 'Arya Stock', 'Daenerys Targaryen', 'Bran Stark', 'Tyrion Lanniser', 'Melisandre', 'Jaime Lannister'];
 var puzzleWord; //store the word for game
 var puzzleWordArr; //
 var puzzleWordEl; //array, DOM element for each letter at same index in puzzleWordArr
@@ -11,27 +11,27 @@ var sortGuessLetters;
 var wordHistory = [];
 var stagesInfo = [
     {
-        img: '/img/stage1.png',
+        img: 'img/stage1.png',
         title: "Black Castle: the Girl and Her 'Needle'",
         caption: "Arya and her sister, Sansa, travel with their father, Lord Eddard, to King's Landing when he is made Hand of the King. Before she leaves, Arya's half-brother Jon gives her a sword called Needle, after her least favorite ladylike activity, as a parting gift. He tells her she will need to practice, but that the first lesson is to 'stick'em with the pointy end."     
     },
     {
-        img: '/img/stage2.jpg',
+        img: 'img/stage2.jpg',
         title: "King's Landing: Captivity Can't Capture a Strong Will",
         caption: "While being captured with her father in King's Landing, Arya's entertaining ideas about swordsmanship was discovered. Syrio Forel, a celebrated Braavosi swordsman, was hired, under whom Arya begins her training. Under his strict, but creative, tutelage, Arya learns to fight in the Braavosi water dancer style with Needle."     
     },
     {
-        img: '/img/stage3.jpg',
+        img: 'img/stage3.jpg',
         title: "Trek 1: Water Dance, Girl's True Color",
         caption: 'stage 3 caption here'     
     },
     {
-        img: '/img/stage4.jpg',
+        img: 'img/stage4.jpg',
         title: "Trek 2: A Girl with No Name? No!",
         caption: 'stage 4 caption here'     
     },
     {
-        img: '/img/stage5.jpg',
+        img: 'img/stage5.jpg',
         title: 'Back to North: Encounter the Night King',
         caption: 'stage 5 caption here'     
     },
@@ -212,13 +212,13 @@ function endGame() {
     if (sortPuzzleWord === sortGuessLetters) {
         stageTitleEl.textContent = 'Congratulations! You killed Night King.';
         stageCaptionEl.textContent = 'After a long fight, you fullfill your task through your dedication and endeavor. You defend your home, family and friends from night king. You defend the North';
-        stageImgEl.setAttribute('src', '/img/winimg.png');
-        stageImgEl.setAttribute('alt', '/img/winimg.png');
+        stageImgEl.setAttribute('src', 'img/winimg.jpg');
+        stageImgEl.setAttribute('alt', 'img/winimg.jpg');
     } else {
         stageTitleEl.textContent = 'Oops, you are so close.';
         stageCaptionEl.textContent = "It is hard journey. Don't give up. Let's have another try. You will get there.";
-        stageImgEl.setAttribute('src', '/img/loseimg.png');
-        stageImgEl.setAttribute('alt', '/img/loseimg.png');
+        stageImgEl.setAttribute('src', 'img/loseimg.jpg');
+        stageImgEl.setAttribute('alt', 'img/loseimg.jpg');
         
         revealAllLetter();
         

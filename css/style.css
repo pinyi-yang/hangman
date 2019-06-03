@@ -23,7 +23,7 @@ header {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat; */
-    background: #5f5f5d url("/img/header-background.png") center no-repeat;
+    background: #5f5f5d url("../img/header-background.jpg") center no-repeat;
     background-size: cover;   
 }
 
@@ -83,7 +83,7 @@ footer {
     width: 100%;
     left: 0;
     padding: 0.5em 1em 0.3em 1em;
-    background: #89b173 url('/img/footer-background.png');
+    background: #89b173 url('../img/footer-background.png');
     background-size: auto;
     border-top: #181819 solid 0.4em;
 }
