@@ -45,15 +45,23 @@ h3, h2 {
 }
 
 .title {
-    margin: auto;
+    margin: 0 auto;
 }
+
 .HMimg {
     min-height: 20em;
     object-fit: fill;
 }
 .caption {
-    width: 62%;
+    width: 61%;
     margin:auto;
+    font-size: 0.7em;
+    position: relative;
+    top: -8em;
+    border-radius: 0.5em;
+    /* border: grey solid 1px;
+    left: 1em; 
+    background: rgba(128, 128, 128, 0.6); */
 }
 p {
     text-align: left;
@@ -86,11 +94,12 @@ footer {
     background: #89b173 url('../img/footer-background.png');
     background-size: auto;
     border-top: #181819 solid 0.4em;
+    color: #3d3d3b;
 }
 #guessedletters {
     margin: 0.5em auto;
     text-align: left;
-    font-size: 1.5em;
+    font-size: 1.2em;
     min-height: 60px;
     font-weight: bold;
     border: black solid 2px;
@@ -116,7 +125,7 @@ footer {
 .worddisplay div {
     /* text-decoration: black underline;
     text-decoration-style: solid; */
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: bold;
     width: 1em;
 }
@@ -125,13 +134,14 @@ footer {
     border-bottom: #f7f1d1 solid 4px;
     border-right: #5f5f5d solid 4px;
     border-left: #5f5f5d solid 4px; 
+    min-height: 1em;
 }
 
 .hidden {
     color: #5f5f5d; /*!this color should be the same as background*/
     border-bottom: #f7f1d1 solid 4px;
     border-right: #5f5f5d solid 4px;
-    border-left: #5f5f5d solid 4px; 
+    border-left: #5f5f5d solid 4px;
 }
 .reveal {
     color: #ec7f37;
@@ -147,8 +157,8 @@ footer {
 #inputletter {
     margin: 0.7em auto 0.5em auto;
     text-align: center;
-    font-size: 1.3em;
-    padding: 0.2em;
+    font-size: 1.2em;
+    padding: 0.1em;
     border:#c09f80 solid 0.1em;
 
 }

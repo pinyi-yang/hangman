@@ -44,12 +44,14 @@ var inputEl = document.getElementById('inputletter');
 var newGameBtnEl = document.getElementById('newgame');
 var stageTitleEl = document.getElementById('stagetitle'); //passed
 var stageImgEl = document.getElementById('stageimage'); //passed
+var captionEl = document.getElementsByClassName('caption')[0];
 var stageCaptionEl = document.getElementById('stagecaption'); //passed
 // console.log(stageTitleEl, stageImgEl, stageCaptionEl);
 var guessedLetterEl = document.getElementById('guessedletters');
 // console.log(guessedLetterEl);
 var wordHistoryEl = document.getElementById('wordhistory');
 // console.log(wordHistoryEl);
+var instructionEl = document.getElementsByClassName('instruction')[0];
 
 //?this is or event listener
 //main activity
@@ -72,7 +74,7 @@ inputEl.addEventListener('keyup', function(evt) {
 
     //? whether it is the end of game after guess
     if (isEndGame()) {
-        console.log(isEndGame());
+        // console.log(isEndGame());
         endGame(); //actions to end a game
     }
 
@@ -98,7 +100,7 @@ function createWord() {
     let temp;
     puzzleWordEl = puzzleWordArr.reduce(function(acc, current){
         temp = document.createElement('div');
-        temp.textContent = current;
+        // temp.textContent = current;
         if (current !== ' ') {
             temp.classList.add("letter", "hidden", current);
         }
@@ -125,10 +127,14 @@ function createGame() {
     inputEl.maxLength = 1; //*enable 1 letter input, passed
 
     //update stage
+    instructionEl.textContent = '';
     stageTitleEl.textContent = 'Winter Is Coming!';
     stageCaptionEl.textContent = "Let's Start!";
     stageImgEl.setAttribute('src', 'img/start.jpg');
     guessedLetterEl.textContent = 'GUESSED LETTERS: ';
+    captionEl.style.background = 'rgba(128, 128, 128, 0.6)';
+    captionEl.style.border = 'grey solid 1px';
+    
     
 }
 //createGame(); //passed,
@@ -151,6 +157,7 @@ function guessCorrect(inputLetter) {
     
     //reveal the correct guess letter
     for (let element of letterEls) {
+        element.textContent = inputLetter;
         element.classList.add('reveal');
     }
 
@@ -177,15 +184,15 @@ function guessWrong(inputLetter) {
 //todo: 1. update stage title, img and caption
 function updateHMimg() {
     let stageNum = (sortGuessLetters.length/sortPuzzleWord.length)*5;
-    console.log(stageNum);
+    // console.log(stageNum);
     stageNum = Math.floor(stageNum);
-    console.log(stageNum);
+    // console.log(stageNum);
     //update title
     stageTitleEl.textContent = stagesInfo[stageNum].title;
     stageImgEl.setAttribute('src', stagesInfo[stageNum].img);
     stageImgEl.setAttribute('alt', stagesInfo[stageNum].img);
     stageCaptionEl.textContent = stagesInfo[stageNum].caption;
-    setTimeout(function(){}, 1000);
+    setTimeout(function(){}, 1000); //! not function yet
 }
 
 //* update guessed letter board
@@ -198,8 +205,8 @@ function updateGuessedLetters(inputLetter) {
 function isEndGame() {
     sortPuzzleWord = puzzleWordArr.sort().join('').replace(' ', '');
     sortGuessLetters = correctGuessLetters.sort().join('');
-    console.log(sortPuzzleWord, sortGuessLetters);
-    console.log(errorsAllow === 0 || sortPuzzleWord === sortGuessLetters);
+    // console.log(sortPuzzleWord, sortGuessLetters);
+    // console.log(errorsAllow === 0 || sortPuzzleWord === sortGuessLetters);
     return errorsAllow === 0 || sortPuzzleWord === sortGuessLetters;
 }
 
@@ -212,7 +219,7 @@ function endGame() {
     if (sortPuzzleWord === sortGuessLetters) {
         stageTitleEl.textContent = 'Congratulations! You killed Night King.';
         stageCaptionEl.textContent = 'After a long fight, you fullfill your task through your dedication and endeavor. You defend your home, family and friends from night king. You defend the North';
-        stageImgEl.setAttribute('src', 'img/winimg.jpg');
+        stageImgEl.setAttribute('src', 'img/winimg.jpg'); //todo alt: stageimageEL.src = "link";
         stageImgEl.setAttribute('alt', 'img/winimg.jpg');
     } else {
         stageTitleEl.textContent = 'Oops, you are so close.';
@@ -221,8 +228,7 @@ function endGame() {
         stageImgEl.setAttribute('alt', 'img/loseimg.jpg');
         
         revealAllLetter();
-        
-        
+               
     }
         
     sortGuessLetters = '';
