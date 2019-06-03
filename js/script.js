@@ -190,7 +190,7 @@ function updateHMimg() {
 
 //* update guessed letter board
 function updateGuessedLetters(inputLetter) {
-    let gussedLettersText = 'Guessed Letter: ' + guessLetters.join(', ');
+    let gussedLettersText = 'GUESSED LETTER: ' + guessLetters.join(', ');
     guessedLetterEl.textContent = gussedLettersText;
 }
 

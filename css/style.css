@@ -121,7 +121,7 @@ footer {
     width: 1em;
 }
 .letter {
-    color: #be4f0c;
+    color: #ec7f37;
     border-bottom: #f7f1d1 solid 4px;
     border-right: #5f5f5d solid 4px;
     border-left: #5f5f5d solid 4px; 
@@ -145,7 +145,7 @@ footer {
 }
 
 #inputletter {
-    margin: 0.5em auto;
+    margin: 0.7em auto 0.5em auto;
     text-align: center;
     font-size: 1.3em;
     padding: 0.2em;
@@ -155,6 +155,8 @@ footer {
 
 #newgame {
     font-size: 1em;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
     width: 10em;
     padding: 0.2em;
     border-radius: 0.3em;
