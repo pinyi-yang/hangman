@@ -18,7 +18,7 @@ var stagesInfo = [
     {
         img: '/img/stage2.jpg',
         title: "King's Landing: Captivity Can't Capture a Strong Will",
-        caption: 'stage 2 caption here'     
+        caption: "While being captured with her father in King's Landing, Arya's entertaining ideas about swordsmanship was discovered. Syrio Forel, a celebrated Braavosi swordsman, was hired, under whom Arya begins her training. Under his strict, but creative, tutelage, Arya learns to fight in the Braavosi water dancer style with Needle."     
     },
     {
         img: '/img/stage3.jpg',
